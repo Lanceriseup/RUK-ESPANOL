@@ -44,7 +44,7 @@ const pillars = [
 export default function Pillars() {
   return (
     <section
-      className="relative py-20 px-6 border-t-[3px] border-[#c9a84c]"
+      className="relative py-10 md:py-20 px-6 border-t-[3px] border-[#c9a84c]"
       style={{ backgroundImage: "url('/4Pillars%20BG.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
     >
       {/* Dark overlay */}
@@ -55,13 +55,31 @@ export default function Pillars() {
         <p className="font-[family-name:var(--font-oswald)] text-[#c9a84c] tracking-[0.25em] uppercase text-sm text-center mb-4">
           The Framework
         </p>
-        <h2 className="font-[family-name:var(--font-oswald)] text-3xl md:text-5xl font-bold uppercase text-center text-white mb-4 leading-tight">
+        <h2 className="font-[family-name:var(--font-oswald)] text-[20px] md:text-5xl font-bold uppercase text-center text-white mb-4 leading-tight">
           RUK 4 Pillars of <span className="text-[#c9a84c]">Power</span>
         </h2>
-        <div className="w-16 h-px bg-[#c9a84c]/50 mx-auto mb-12" />
+        <div className="w-16 h-px bg-[#c9a84c]/50 mx-auto mb-4 md:mb-12" />
 
-        {/* 4-column grid */}
-        <div className="grid md:grid-cols-4 gap-3">
+        {/* Mobile: compact number rows (Option C) */}
+        <div className="md:hidden flex flex-col gap-[6px] mb-[6px]">
+          {pillars.map((pillar, i) => (
+            <div key={i} className="flex items-stretch bg-[#0d0d0d]/95 overflow-hidden">
+              <div className="font-[family-name:var(--font-oswald)] text-black text-[18px] font-bold bg-[#c9a84c] min-w-[44px] flex items-center justify-center flex-shrink-0">
+                {pillar.num}
+              </div>
+              <div className="py-[10px] px-3 flex-1">
+                <div className="font-[family-name:var(--font-oswald)] text-white text-[16px] uppercase tracking-[.06em] mb-[3px] flex items-center gap-[7px]">
+                  {pillar.icon}
+                  {pillar.title}
+                </div>
+                <p className="text-[#aaaaaa] text-[10px] leading-[1.55]">{pillar.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: 4-column grid */}
+        <div className="hidden md:grid md:grid-cols-4 gap-3">
           {pillars.map((pillar, i) => (
             <div
               key={i}
@@ -89,21 +107,21 @@ export default function Pillars() {
         </div>
 
         {/* Foundation + 3-Day blocks */}
-        <div className="mt-3 grid md:grid-cols-2 gap-3 bg-[#0a0a0a]/90 px-7 py-7">
-          <div className="border-l-[4px] border-[#c9a84c] pl-6">
-            <h3 className="font-[family-name:var(--font-oswald)] text-[22px] uppercase tracking-[.08em] text-white mb-3">
+        <div className="mt-3 grid grid-cols-2 md:grid-cols-2 gap-3 bg-[#0a0a0a]/90 px-4 md:px-7 py-4 md:py-7">
+          <div className="border-l-[3px] md:border-l-[4px] border-[#c9a84c] pl-3 md:pl-6">
+            <h3 className="font-[family-name:var(--font-oswald)] text-[13px] md:text-[22px] uppercase tracking-[.06em] md:tracking-[.08em] text-white mb-2 md:mb-3">
               Foundation of Faith
             </h3>
-            <p className="text-[#cccccc] text-[15px] leading-[1.75]">
+            <p className="text-[#cccccc] text-[10px] md:text-[15px] leading-[1.55] md:leading-[1.75]">
               This is NOT a Bible Study or Church. This is a brotherhood of like-minded men who want to take their Faith,
               Family, Fitness &amp; Finances to the next level, while keeping God at the center of their life.
             </p>
           </div>
-          <div className="border-l-[4px] border-[#c9a84c] pl-6">
-            <h3 className="font-[family-name:var(--font-oswald)] text-[22px] uppercase tracking-[.08em] text-white mb-3">
+          <div className="border-l-[3px] md:border-l-[4px] border-[#c9a84c] pl-3 md:pl-6">
+            <h3 className="font-[family-name:var(--font-oswald)] text-[13px] md:text-[22px] uppercase tracking-[.06em] md:tracking-[.08em] text-white mb-2 md:mb-3">
               3 Day Intensive
             </h3>
-            <p className="text-[#cccccc] text-[15px] leading-[1.75]">
+            <p className="text-[#cccccc] text-[10px] md:text-[15px] leading-[1.55] md:leading-[1.75]">
               Rise Up Kings offers a 3-day event designed to re-ignite the power, passion &amp; energy inside, without
               sacrificing what matters most. Learn cutting edge techniques and strategies to transform your mind and
               create a life of liberty &amp; freedom.

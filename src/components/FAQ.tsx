@@ -3,7 +3,7 @@ const faqs = [
     question: "What is included in the Rise Up Kings Cost for the event?",
     answer: (
       <>
-        <p className="text-[#444444] text-[15px] leading-[1.8] mb-3">The event cost covers:</p>
+        <p className="text-[#444444] text-[12px] md:text-[15px] leading-[1.7] mb-2 md:mb-3">The event cost covers:</p>
         <ul className="space-y-2">
           {[
             "Meals during the program dates",
@@ -14,7 +14,7 @@ const faqs = [
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-3">
               <span className="mt-[5px] flex-shrink-0 w-[6px] h-[6px] rounded-full bg-[#c9a84c]" />
-              <span className="text-[#444444] text-[15px] leading-[1.8]">{item}</span>
+              <span className="text-[#444444] text-[12px] md:text-[15px] leading-[1.65]">{item}</span>
             </li>
           ))}
         </ul>
@@ -29,7 +29,7 @@ const faqs = [
         <ul className="space-y-2">
           <li className="flex items-start gap-3">
             <span className="mt-[5px] flex-shrink-0 w-[6px] h-[6px] rounded-full bg-[#c9a84c]" />
-            <span className="text-[#444444] text-[15px] leading-[1.8]">Travel expenses to and from the event</span>
+            <span className="text-[#444444] text-[12px] md:text-[15px] leading-[1.65]">Travel expenses to and from the event</span>
           </li>
         </ul>
       </>
@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "Is there a payment plan available?",
     answer: (
-      <p className="text-[#444444] text-[15px] leading-[1.8]">
+      <p className="text-[#444444] text-[12px] md:text-[15px] leading-[1.65]">
         We understand that upfront costs may be challenging for some, which is why we offer payment plan options.
         For more details on structuring your investment, please email{" "}
         <a href="mailto:Jessica@riseupkingsespanol.com" className="text-[#c9a84c] underline underline-offset-2">
@@ -51,7 +51,7 @@ const faqs = [
   {
     question: "What is your refund/cancellation policy?",
     answer: (
-      <p className="text-[#444444] text-[15px] leading-[1.8]">
+      <p className="text-[#444444] text-[12px] md:text-[15px] leading-[1.65]">
         Cancellations made 30 days or less before the event date are subject to 100% of the $200 registration fee.
         The registration fee is non-refundable.
       </p>
@@ -61,29 +61,29 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <div className="bg-[#f7f5f0] pb-20 px-6">
+    <div className="bg-[#f7f5f0] pb-10 md:pb-20 px-6">
         <div className="max-w-3xl mx-auto">
           <p className="font-[family-name:var(--font-oswald)] text-[#c9a84c] tracking-[0.25em] uppercase text-sm text-center mb-4">
             Got Questions?
           </p>
-          <h2 className="font-[family-name:var(--font-oswald)] text-3xl md:text-5xl font-bold uppercase text-center text-[#1a1a1a] mb-4 leading-tight">
+          <h2 className="font-[family-name:var(--font-oswald)] text-[20px] md:text-5xl font-bold uppercase text-center text-[#1a1a1a] mb-4 leading-tight">
             Frequently Asked <span className="text-[#c9a84c]">Questions</span>
           </h2>
-          <div className="w-16 h-px bg-[#c9a84c] mx-auto mb-12" />
+          <div className="w-16 h-px bg-[#c9a84c] mx-auto mb-4 md:mb-12" />
 
           <div className="flex flex-col gap-0 divide-y divide-[#1a1a1a]/10">
             {faqs.map((faq, i) => (
               <details key={i} className="group">
-                <summary className="flex items-center justify-between gap-4 cursor-pointer list-none py-5 select-none">
-                  <h3 className="font-[family-name:var(--font-oswald)] text-[18px] uppercase tracking-[.04em] text-[#1a1a1a] leading-snug">
+                <summary className="flex items-center justify-between gap-4 cursor-pointer list-none py-3 md:py-5 select-none">
+                  <h3 className="font-[family-name:var(--font-oswald)] text-[14px] md:text-[18px] uppercase tracking-[.03em] md:tracking-[.04em] text-[#1a1a1a] leading-snug">
                     {faq.question}
                   </h3>
                   {/* Plus / Minus toggle */}
-                  <span className="flex-shrink-0 w-7 h-7 border-2 border-[#c9a84c] flex items-center justify-center text-[#c9a84c] font-bold text-lg leading-none group-open:rotate-45 transition-transform duration-200">
+                  <span className="flex-shrink-0 w-6 h-6 md:w-7 md:h-7 border-2 border-[#c9a84c] flex items-center justify-center text-[#c9a84c] font-bold text-base md:text-lg leading-none group-open:rotate-45 transition-transform duration-200">
                     +
                   </span>
                 </summary>
-                <div className="pb-5 pl-0 pr-9">
+                <div className="pb-3 md:pb-5 pl-0 pr-7 md:pr-9">
                   {faq.answer}
                 </div>
               </details>

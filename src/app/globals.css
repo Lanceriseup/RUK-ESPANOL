@@ -16,6 +16,17 @@
   --font-display: var(--font-oswald);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-no-bar {
+  scrollbar-width: none;
+}
+.scroll-no-bar::-webkit-scrollbar {
+  display: none;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -43,3 +54,15 @@ body {
 .arrow-left-2  { animation: ruk-arrow-left  1.3s ease-in-out infinite 0.18s; }
 .arrow-right-1 { animation: ruk-arrow-right 1.3s ease-in-out infinite; }
 .arrow-right-2 { animation: ruk-arrow-right 1.3s ease-in-out infinite 0.18s; }
+
+@media (max-width: 767px) {
+  #register input {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 13px;
+  }
+  #register label {
+    margin-bottom: 3px;
+    font-size: 8.5px;
+  }
+}
